@@ -11,7 +11,7 @@
 
 .textarea {
     display: block;
-    width: 50rem;
+    width: 58rem;
     height: 10rem;
     margin: 1rem auto;
     padding: 1rem;
@@ -20,7 +20,7 @@
 }
 
 .keyboard-container {
-    width: 52rem;
+    width: 60rem;
     margin: 0 auto;
     padding: .5rem 0;
     background: #e3ebf1;
@@ -28,4 +28,45 @@
     border-radius: .5rem;
 }
 
+.keyboard-row {
+    display: flex;
+    padding: .2rem;
+}
 
+.keyboard-key {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .5rem;
+    margin: .1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #80b3ff;
+    background: #0d316f;
+    border-radius: .3rem;
+    cursor: pointer;
+    user-select: none;
+    transition: border-radius 0.3s, background-color 0.3s
+}
+
+.keyboard-container > .keyboard-row:nth-child(1) > .keyboard-key:last-child {
+    width: 10rem;
+}
+
+.keyboard-container > .keyboard-row:nth-child(2) > .keyboard-key:nth-child(1),
+.keyboard-container > .keyboard-row:nth-child(2) > .keyboard-key:last-child,
+.keyboard-container > .keyboard-row:last-child > .keyboard-key:last-child {
+    width: 4.4rem;
+}
+
+.keyboard-container > .keyboard-row:nth-child(3) > .keyboard-key:first-child,
+.keyboard-container > .keyboard-row:nth-child(3) > .keyboard-key:last-child,
+.keyboard-container > .keyboard-row:nth-child(4) > .keyboard-key:first-child,
+.keyboard-container > .keyboard-row:nth-child(4) > .keyboard-key:last-child{
+    width: 8.1rem;
+}
+
+.keyboard-container > .keyboard-row:last-child > .keyboard-key:nth-child(4) {
+    width: 26.6rem;
+}

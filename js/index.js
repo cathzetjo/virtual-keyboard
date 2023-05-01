@@ -1,3 +1,8 @@
+import {keys} from './keys.js';
+
+let lang = "en";
+let keyboard = keys.en;
+
 const body = document.querySelector('body');
 
 function createElement(tagName, className, innerText) {
@@ -26,3 +31,19 @@ addElement(wrapper, textArea);
 
 const keyboardContainer = createElement("section", "keyboard-container");
 addElement(wrapper, keyboardContainer);
+
+if (lang==="en") {
+    keyboard = keys.en;
+}
+else if (lang==="ru") {
+    keyboard = keys.ru;
+}
+
+keyboard.forEach(row => {
+    const keyboardRow = createElement("div", "keyboard-row");
+    addElement(keyboardContainer, keyboardRow);
+    row.forEach(key => {
+        addElement(keyboardRow, createElement("div", "keyboard-key", key));
+    });
+});
+
