@@ -11,7 +11,7 @@
 
 .textarea {
     display: block;
-    width: 58rem;
+    width: 61rem;
     height: 10rem;
     margin: 1rem auto;
     padding: 1rem;
@@ -20,7 +20,7 @@
 }
 
 .keyboard-container {
-    width: 60rem;
+    width: 63rem;
     margin: 0 auto;
     padding: .5rem 0;
     background: #e3ebf1;
@@ -44,10 +44,22 @@
     font-weight: bold;
     color: #80b3ff;
     background: #0d316f;
+    border: 2px solid transparent;
     border-radius: .3rem;
     cursor: pointer;
     user-select: none;
     transition: border-radius 0.3s, background-color 0.3s
+}
+
+.keyboard-key:hover,
+.pressed {
+    background: #7799d6;
+    color: #0d316f;
+}
+
+.keyboard-key:active,
+.pressed {
+    border-color: #0d316f;
 }
 
 .keyboard-container > .keyboard-row:nth-child(1) > .keyboard-key:last-child {
@@ -57,16 +69,40 @@
 .keyboard-container > .keyboard-row:nth-child(2) > .keyboard-key:nth-child(1),
 .keyboard-container > .keyboard-row:nth-child(2) > .keyboard-key:last-child,
 .keyboard-container > .keyboard-row:last-child > .keyboard-key:last-child {
-    width: 4.4rem;
+    width: 4.2rem;
 }
 
 .keyboard-container > .keyboard-row:nth-child(3) > .keyboard-key:first-child,
 .keyboard-container > .keyboard-row:nth-child(3) > .keyboard-key:last-child,
 .keyboard-container > .keyboard-row:nth-child(4) > .keyboard-key:first-child,
-.keyboard-container > .keyboard-row:nth-child(4) > .keyboard-key:last-child{
+.keyboard-container > .keyboard-row:nth-child(4) > .keyboard-key:last-child {
     width: 8.1rem;
 }
 
 .keyboard-container > .keyboard-row:last-child > .keyboard-key:nth-child(4) {
-    width: 26.6rem;
+    width: 27.9rem;
+}
+
+.lng-helper{
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.lng-switcher {
+    background: #e3ebf1;
+    color: #6c89b3;
+    display: block;
+    width: 5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: .5rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: .2rem;
+}
+
+.lng-switcher:hover {
+    box-shadow: 0 -5px 0 #0d316f inset;
+    color: #0d316f;
 }
