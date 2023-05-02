@@ -615,11 +615,5 @@ document.addEventListener('keyup',
         }
     })
 
-
-// const keyboardContainerElement = document.querySelector(".keyboard-container");
-//
-// const rowsElements = keyboardContainerElement.childNodes;
-//
-// rowsElements.forEach(row=>{
 //     console.log(row.childNodes);
 // })
