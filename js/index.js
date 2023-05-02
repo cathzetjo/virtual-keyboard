@@ -615,5 +615,41 @@ document.addEventListener('keyup',
         }
     })
 
-//     console.log(row.childNodes);
-// })
+const capsLkElement = document.querySelector(".keyboard-container > .keyboard-row:nth-child(3) > .keyboard-key:nth-child(1)");
+
+capsLkElement.addEventListener('click', (event) => {
+    changeCapsKeys(keyboard, event);
+})
+
+document.addEventListener('keydown',
+    function (event) {
+        if (event.code === "CapsLock") {
+            changeCapsKeys(keyboard, event);
+        }
+    });
+
+function changeCapsKeys(keyboard, event) {
+    const keyboardRow = document.querySelectorAll(".keyboard-row");
+
+
+    if (event.getModifierState("CapsLock")) {
+        for (let i = 0; i < keyboard.length; ++i) {
+            const children = keyboardRow[i].childNodes;
+            for (let j = 0; j < children.length; ++j) {
+                if (children[j].innerHTML.length == 1) {
+                    children[j].innerHTML = (children[j].innerHTML).toUpperCase();
+                }
+            }
+        }
+    } else {
+        for (let i = 0; i < keyboard.length; ++i) {
+            const children = keyboardRow[i].childNodes;
+            for (let j = 0; j < children.length; ++j) {
+                if (children[j].innerHTML.length == 1) {
+                    children[j].innerHTML = (children[j].innerHTML).toLowerCase();
+                }
+            }
+        }
+    }
+
+}
