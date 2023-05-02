@@ -636,7 +636,7 @@ function changeCapsKeys(keyboard, event) {
         for (let i = 0; i < keyboard.length; ++i) {
             const children = keyboardRow[i].childNodes;
             for (let j = 0; j < children.length; ++j) {
-                if (children[j].innerHTML.length == 1) {
+                if (children[j].innerHTML.length === 1) {
                     children[j].innerHTML = (children[j].innerHTML).toUpperCase();
                 }
             }
@@ -645,7 +645,7 @@ function changeCapsKeys(keyboard, event) {
         for (let i = 0; i < keyboard.length; ++i) {
             const children = keyboardRow[i].childNodes;
             for (let j = 0; j < children.length; ++j) {
-                if (children[j].innerHTML.length == 1) {
+                if (children[j].innerHTML.length === 1) {
                     children[j].innerHTML = (children[j].innerHTML).toLowerCase();
                 }
             }
