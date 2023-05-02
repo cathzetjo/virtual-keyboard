@@ -41,6 +41,7 @@ addElement(wrapper, title);
 
 const textArea = createElement("textarea", "textarea");
 addElement(wrapper, textArea);
+textArea.focus();
 
 const keyboardContainer = createElement("section", "keyboard-container");
 addElement(wrapper, keyboardContainer);
