@@ -60,6 +60,8 @@
 .keyboard-key:active,
 .pressed {
     border-color: #0d316f;
+    margin-top: -.2rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
 }
 
 .keyboard-container > .keyboard-row:nth-child(1) > .keyboard-key:last-child {
